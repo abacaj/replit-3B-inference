@@ -1,10 +1,10 @@
-# Replit Code Instruct inference code using CPU
+# Replit Code Instruct inference using CPU
 
 Run inference on the replit code instruct using your CPU. This inference code uses a [ggml](https://github.com/ggerganov/llama.cpp) quantized model. To run the model we'll use a library called [ctransformers](https://github.com/marella/ctransformers) that has bindings to ggml in python.
 
 Demo:
 
-[Inference Demo](null)
+[Inference Demo](https://github.com/abacaj/replit-3B-inference/assets/7272343/a68ec17a-830b-4d76-9df2-166ca6b7fb2b)
 
 ## Requirements
 
