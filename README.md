@@ -1,6 +1,6 @@
 # Replit Code Instruct inference using CPU
 
-Run inference on the replit code instruct using your CPU. This inference code uses a [ggml](https://github.com/ggerganov/llama.cpp) quantized model. To run the model we'll use a library called [ctransformers](https://github.com/marella/ctransformers) that has bindings to ggml in python.
+Run inference on the replit code instruct model using your CPU. This inference code uses a [ggml](https://github.com/ggerganov/llama.cpp) quantized model. To run the model we'll use a library called [ctransformers](https://github.com/marella/ctransformers) that has bindings to ggml in python.
 
 Demo:
 
@@ -24,6 +24,11 @@ First create a venv.
 ```sh
 python -m venv env && source env/bin/activate
 ```
+Next install the submodule with ctransformers change.
+
+```sh
+git submodule update --init --recursive
+```
 
 Next install dependencies.
 
@@ -31,7 +36,7 @@ Next install dependencies.
 pip install -r requirements.txt
 ```
 
-Next download the quantized model weights (about 19GB).
+Next download the quantized model weights (about 1.5GB).
 
 ```sh
 python download_model.py
