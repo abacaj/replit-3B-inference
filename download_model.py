@@ -29,9 +29,9 @@ def download_replit_quant(destination_folder: str, repo_id: str, model_filename:
 if __name__ == "__main__":
     """full url: https://huggingface.co/abacaj/Replit-v2-CodeInstruct-3B-ggml/blob/main/replit-v2-codeinstruct-3b.q4_1.bin"""
 
+    destination_folder = "models"
     repo_id = "abacaj/Replit-v2-CodeInstruct-3B-ggml"
     model_filename = "replit-v2-codeinstruct-3b.q4_1.bin"
-    destination_folder = "models"
     config_filename = "config.json"
 
     download_replit_quant(destination_folder, repo_id, model_filename)
