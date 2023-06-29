@@ -41,7 +41,8 @@ def generate(
 
 if __name__ == "__main__":
     config = AutoConfig.from_pretrained(
-        "teknium/Replit-v2-CodeInstruct-3B", context_length=2048
+        os.path.abspath("models"),
+        context_length=2048,
     )
     llm = AutoModelForCausalLM.from_pretrained(
         os.path.abspath("models/replit-v2-codeinstruct-3b.q4_1.bin"),

@@ -1,5 +1,12 @@
 import os
+import requests
 from huggingface_hub import hf_hub_download
+
+
+def download_config(config_file: str, destination_folder: str):
+    config = requests.get(config_file).text
+    with open(f"{destination_folder}/config.json", "w") as f:
+        f.write(config)
 
 
 def download_replit_quant(destination_folder: str, repo_id: str, model_filename: str):
@@ -18,4 +25,9 @@ if __name__ == "__main__":
     repo_id = "abacaj/Replit-v2-CodeInstruct-3B-ggml"
     model_filename = "replit-v2-codeinstruct-3b.q4_1.bin"
     destination_folder = "models"
+    config_file = (
+        "https://huggingface.co/teknium/Replit-v2-CodeInstruct-3B/raw/main/config.json"
+    )
+
     download_replit_quant(destination_folder, repo_id, model_filename)
+    download_config(config_file, destination_folder)
