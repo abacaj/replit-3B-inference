@@ -2,21 +2,7 @@ import os
 from huggingface_hub import hf_hub_download
 
 
-def download_config(
-    destination_folder: str,
-    repo_id: str,
-    config_filename: str,
-):
-    local_path = os.path.abspath(destination_folder)
-    return hf_hub_download(
-        repo_id=repo_id,
-        filename=config_filename,
-        local_dir=local_path,
-        local_dir_use_symlinks=True,
-    )
-
-
-def download_replit_quant(destination_folder: str, repo_id: str, model_filename: str):
+def download_file(destination_folder: str, repo_id: str, model_filename: str):
     local_path = os.path.abspath(destination_folder)
     return hf_hub_download(
         repo_id=repo_id,
@@ -34,5 +20,5 @@ if __name__ == "__main__":
     model_filename = "replit-v2-codeinstruct-3b.q4_1.bin"
     config_filename = "config.json"
 
-    download_replit_quant(destination_folder, repo_id, model_filename)
-    download_config(destination_folder, repo_id, config_filename)
+    download_file(destination_folder, repo_id, model_filename)
+    download_file(destination_folder, repo_id, config_filename)
