@@ -2,11 +2,11 @@ import os
 from huggingface_hub import hf_hub_download
 
 
-def download_file(destination_folder: str, repo_id: str, model_filename: str):
+def download_file(destination_folder: str, repo_id: str, filename: str):
     local_path = os.path.abspath(destination_folder)
     return hf_hub_download(
         repo_id=repo_id,
-        filename=model_filename,
+        filename=filename,
         local_dir=local_path,
         local_dir_use_symlinks=True,
     )
