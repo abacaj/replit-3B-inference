@@ -1,4 +1,0 @@
-[submodule "ctransformers"]
-	path = ctransformers
-	url = https://github.com/abacaj/ctransformers
-	branch = replit-code

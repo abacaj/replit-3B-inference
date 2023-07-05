@@ -24,11 +24,6 @@ First create a venv.
 ```sh
 python -m venv env && source env/bin/activate
 ```
-Next install the submodule with ctransformers patch.
-
-```sh
-git submodule update --init --recursive
-```
 
 Next install dependencies.
 
